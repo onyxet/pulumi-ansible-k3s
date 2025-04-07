@@ -6,6 +6,7 @@ const instance = new Instance("veryFirstInstance", {
     tags: {
         Name: "ManualProvisionerInstance",
         Environment: "Test",
+        Owner: "Pulumi",
     },
     subnetId: "subnet-08f9297b6109d74b7",
     vpcId: "vpc-057aa31907a0d6171",
