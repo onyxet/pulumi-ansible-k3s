@@ -1,0 +1,13 @@
+{
+    "name": "pulumi-ansible-k3s",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^6.75.0",
+        "@pulumi/pulumi": "^3.160.0",
+        "tslib": "^2.8.1"
+    }
+}
