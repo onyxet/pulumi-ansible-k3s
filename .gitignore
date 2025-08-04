@@ -1,2 +1,8 @@
 /bin/
 /node_modules/
+
+# Test coverage
+/coverage/
+
+# Test results
+junit.xml
