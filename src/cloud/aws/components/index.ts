@@ -1,2 +1,3 @@
 export { Instance } from "./instance"
-export { InstanceArgs } from "./types"
+export { S3Bucket } from "./s3bucket"
+export { InstanceArgs, S3BucketArgs } from "./types"

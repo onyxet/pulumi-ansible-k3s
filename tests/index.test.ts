@@ -14,6 +14,22 @@ describe("Main Index", () => {
     expect(pulumi.Output.isInstance(indexModule.instanceId)).toBe(true);
   });
 
+  it("should export bucketName", async () => {
+    // Import the main module
+    const indexModule = await import("../index");
+    
+    expect(indexModule.bucketName).toBeDefined();
+    expect(pulumi.Output.isInstance(indexModule.bucketName)).toBe(true);
+  });
+
+  it("should export bucketArn", async () => {
+    // Import the main module
+    const indexModule = await import("../index");
+    
+    expect(indexModule.bucketArn).toBeDefined();
+    expect(pulumi.Output.isInstance(indexModule.bucketArn)).toBe(true);
+  });
+
   it("should create instance with correct configuration", async () => {
     // Import the main module
     const indexModule = await import("../index");
@@ -24,5 +40,19 @@ describe("Main Index", () => {
     // We can test that the output exists without resolving it
     // since we're using mocks
     expect(pulumi.Output.isInstance(indexModule.instanceId)).toBe(true);
+  });
+
+  it("should create S3 bucket with correct configuration", async () => {
+    // Import the main module
+    const indexModule = await import("../index");
+    
+    // The bucket outputs should be Pulumi Outputs
+    expect(indexModule.bucketName).toBeDefined();
+    expect(indexModule.bucketArn).toBeDefined();
+    
+    // We can test that the outputs exist without resolving them
+    // since we're using mocks
+    expect(pulumi.Output.isInstance(indexModule.bucketName)).toBe(true);
+    expect(pulumi.Output.isInstance(indexModule.bucketArn)).toBe(true);
   });
 });
