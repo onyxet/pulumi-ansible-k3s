@@ -5,3 +5,11 @@ export interface InstanceArgs {
     subnetId: string;
     vpcId: string
 }
+
+export interface S3BucketArgs {
+    bucketName?: string;
+    versioning?: boolean;
+    encryption?: boolean;
+    publicReadAccess?: boolean;
+    tags?: { [key: string]: string };
+}
